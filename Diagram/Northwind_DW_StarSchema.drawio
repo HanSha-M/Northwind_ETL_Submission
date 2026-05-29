@@ -1,0 +1,49 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0" version="29.6.6">
+  <diagram name="Sida-1" id="m-a4ePn7UdPUD-P-ZOIi">
+    <mxGraphModel dx="2024" dy="698" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="LOu5-DHRelIa1tslTrq4-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div&gt;FactSales&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;PK SalesKey INT&lt;/div&gt;&lt;div&gt;OrderID INT&lt;/div&gt;&lt;div&gt;FK DateKey INT&lt;/div&gt;&lt;div&gt;FK CustomerKey INT&lt;/div&gt;&lt;div&gt;FK ProductKey INT&lt;/div&gt;&lt;div&gt;Quantity INT&lt;/div&gt;&lt;div&gt;UnitPrice DECIMAL(18,2)&lt;/div&gt;&lt;div&gt;Discount DECIMAL(5,2)&lt;/div&gt;&lt;div style=&quot;&quot;&gt;SalesAmount DECIMAL(18,2)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="170" width="280" x="300" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="LOu5-DHRelIa1tslTrq4-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div&gt;DimCustomer&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;PK CustomerKey INT&lt;/div&gt;&lt;div&gt;CustomerID NVARCHAR(10)&lt;/div&gt;&lt;div&gt;CompanyName NVARCHAR(100)&lt;/div&gt;&lt;div&gt;ContactName NVARCHAR(100)&lt;/div&gt;&lt;div&gt;City NVARCHAR(100)&lt;/div&gt;&lt;div&gt;Country NVARCHAR(100)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="135" width="240" x="-60" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="LOu5-DHRelIa1tslTrq4-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div&gt;DimProduct&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;PK ProductKey INT&lt;/div&gt;&lt;div&gt;ProductID INT&lt;/div&gt;&lt;div&gt;ProductName NVARCHAR(100)&lt;/div&gt;&lt;div&gt;CategoryName NVARCHAR(100)&lt;/div&gt;&lt;div&gt;UnitPrice DECIMAL(18,2)&lt;/div&gt;&lt;div&gt;CostPrice DECIMAL(18,2)&lt;/div&gt;&lt;div&gt;CountryOfOrigin NVARCHAR(100)&lt;/div&gt;&lt;div&gt;SupplierProductCode NVARCHAR(50)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="293" x="700" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="LOu5-DHRelIa1tslTrq4-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div&gt;DimDate&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;PK DateKey INT&lt;/div&gt;&lt;div&gt;FullDate DATE&lt;/div&gt;&lt;div&gt;Year INT&lt;/div&gt;&lt;div&gt;Quarter INT&lt;/div&gt;&lt;div&gt;Month INT&lt;/div&gt;&lt;div&gt;MonthName NVARCHAR(20)&lt;/div&gt;&lt;div&gt;Day INT&lt;/div&gt;&lt;div&gt;WeekdayName NVARCHAR(20)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="320" x="310" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="LOu5-DHRelIa1tslTrq4-6" edge="1" parent="1" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="100" relative="1" width="100" as="geometry">
+            <mxPoint x="180" y="376.25" as="sourcePoint" />
+            <mxPoint x="300" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LOu5-DHRelIa1tslTrq4-9" edge="1" parent="1" source="LOu5-DHRelIa1tslTrq4-4" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;rounded=0;exitX=0.004;exitY=0.609;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.004;entryY=0.447;entryDx=0;entryDy=0;entryPerimeter=0;" target="LOu5-DHRelIa1tslTrq4-1" value="">
+          <mxGeometry height="100" relative="1" width="100" as="geometry">
+            <mxPoint x="350" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LOu5-DHRelIa1tslTrq4-10" edge="1" parent="1" source="LOu5-DHRelIa1tslTrq4-5" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;rounded=0;exitX=0.203;exitY=0.993;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.326;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="LOu5-DHRelIa1tslTrq4-1" value="">
+          <mxGeometry height="100" relative="1" width="100" as="geometry">
+            <mxPoint x="350" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LOu5-DHRelIa1tslTrq4-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;rotation=0;" value="1 → *" vertex="1">
+          <mxGeometry height="10" width="80" x="160" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="LOu5-DHRelIa1tslTrq4-13" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="1 → *" vertex="1">
+          <mxGeometry height="30" width="60" x="647" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="LOu5-DHRelIa1tslTrq4-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="1 → *" vertex="1">
+          <mxGeometry height="30" width="60" x="350" y="240" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
